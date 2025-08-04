@@ -1,0 +1,139 @@
+/* .taskList_component{
+    height: 90%;
+    width: 55%;
+    border: dotted black 1px;
+} */
+/* ========== TaskList Component ========== */
+.taskList_component {
+    height: 90%;
+    width: 55%;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    padding: 1rem;
+    border-radius: 8px;
+    /* overflow-y: auto; */
+}
+
+/* ========== Filter, Sort, Search Bar ========== */
+.taskList_filter_sorting_btns_box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-bottom: 1.2rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Smaller Inputs & Selects */
+.taskList_search_title_input,
+.taskList_status_filter,
+.taskList_priority_filter,
+.taskList_sorting_filter {
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+    border: 1px solid #555;
+    padding: 0.4rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    min-width: 160px;
+}
+
+/* Reset Button */
+.taskList_reset_filters_btn {
+    background-color: #3a3a3a;
+    color: #fff;
+    border: none;
+    padding: 0.45rem 0.8rem;
+    font-size: 0.85rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.taskList_reset_filters_btn:hover {
+    background-color: #555;
+}
+
+/* ========== Task Items Container ========== */
+.tasksList_tasks_container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-height: 57vh;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+}
+
+/* Custom scrollbar */
+.tasksList_tasks_container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.tasksList_tasks_container::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+.tasksList_tasks_container::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 4px;
+}
+
+/* ========== Responsive Styles ========== */
+
+/* Tablet */
+@media (max-width: 768px) {
+    .taskList_component {
+        width: 85%;
+        padding: 1rem;
+        height: 60vh;
+    }
+
+    .taskList_filter_sorting_btns_box {
+        gap: 0.6rem;
+        justify-content: center;
+    }
+
+    .taskList_search_title_input,
+    .taskList_status_filter,
+    .taskList_priority_filter,
+    .taskList_sorting_filter {
+        min-width: 120px;
+        font-size: 0.8rem;
+    }
+
+    .taskList_reset_filters_btn {
+        padding: 0.4rem 0.7rem;
+        font-size: 0.8rem;
+    }
+
+    .tasksList_tasks_container {
+        max-height: 50vh;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .taskList_component {
+        width: 95%;
+        height: auto;
+    }
+
+    .taskList_filter_sorting_btns_box {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .taskList_search_title_input,
+    .taskList_status_filter,
+    .taskList_priority_filter,
+    .taskList_sorting_filter,
+    .taskList_reset_filters_btn {
+        width: 100%;
+        font-size: 0.85rem;
+        padding: 0.4rem 0.6rem;
+    }
+
+    .tasksList_tasks_container {
+        max-height: 45vh;
+    }
+}

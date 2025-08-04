@@ -1,0 +1,117 @@
+/* .header_component{
+    height: 15vh;
+    border: dotted 1px black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+} */
+/* Dark theme base styles */
+.header_component {
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    background-color: #292828;
+    color: #f0f0f0;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+/* Dark theme for the button */
+.header_component button {
+    background-color: #1e1e1e;
+    color: #f0f0f0;
+    border: 1px solid #555;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.header_component button:hover {
+    background-color: #2a2a2a;
+}
+
+.theme-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+  margin-right: 1rem;
+}
+
+.theme-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0;
+  right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 26px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px; width: 18px;
+  left: 4px; bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+.header_controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Responsive: Tablet */
+@media (max-width: 768px) {
+    .header_component {
+        padding: 0 1rem;
+        flex-direction: row;
+    }
+
+    .header_component p {
+        font-size: 1.1rem;
+    }
+
+    .header_component button {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Responsive: Mobile */
+@media (max-width: 480px) {
+    .header_component {
+        flex-direction: column;
+        height: auto;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .header_component p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .header_component button {
+        width: 100%;
+    }
+}

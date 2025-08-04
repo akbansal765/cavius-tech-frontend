@@ -1,0 +1,90 @@
+/* .taskForm_component{
+    height: 90%;
+    width: 35%;
+    border: dotted black 1px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+} */
+/* Base styling for dark theme */
+.taskForm_component {
+    height: 90%;
+    width: 35%;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    padding: 1rem;
+    border-radius: 8px;
+    border-right: rgb(136, 134, 134) solid 1px !important;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.05);
+}
+
+/* Flex form layout */
+.createTaskForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Input fields, text area, select styling */
+.createTaskForm input,
+.createTaskForm textarea,
+.createTaskForm select {
+    width: 100%;
+    background-color: #2a2a2a;
+    color: #f0f0f0;
+    border: 1px solid #555;
+    padding: 0.6rem 0.8rem;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.createTaskForm textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Button styling */
+.taskForm_createTask_btn {
+    background-color: #3a3a3a;
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.taskForm_createTask_btn:hover {
+    background-color: #555;
+}
+
+/* Tablet responsiveness */
+@media (max-width: 768px) {
+    .taskForm_component {
+        width: 60%;
+        padding: 1rem;
+    }
+
+    .createTaskForm input,
+    .createTaskForm textarea,
+    .createTaskForm select {
+        font-size: 0.95rem;
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+    .taskForm_component {
+        width: 90%;
+        padding: 1rem;
+        height: 50vh;
+    }
+
+    .taskForm_createTask_btn {
+        width: 100%;
+        font-size: 1rem;
+    }
+}
