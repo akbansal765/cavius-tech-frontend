@@ -5,6 +5,9 @@ DEMO VIDEO LINK: https://drive.google.com/file/d/1JuYCkhQ4qwFipMDLHAtWQonyJaiKM5
 GitHub Backend REPO: https://github.com/akbansal765/cavius-tech-backend
 GitHub Frontend REPO: https://github.com/akbansal765/cavius-tech-frontend
 
+
+Netlify Link: https://cavius-tech-frontend.netlify.app/  (Kindly use the project on your local server if this does not work properly, render server usually sleep after a peroid of inactivity)
+
 # Project Setup Instructions
 
 Follow the steps below to get the project running locally.
