@@ -2,6 +2,9 @@
 
 DEMO VIDEO LINK: https://drive.google.com/file/d/1JuYCkhQ4qwFipMDLHAtWQonyJaiKM50O/view?usp=sharing
 
+GitHub Backend REPO: https://github.com/akbansal765/cavius-tech-backend
+GitHub Frontend REPO: https://github.com/akbansal765/cavius-tech-frontend
+
 # Project Setup Instructions
 
 Follow the steps below to get the project running locally.

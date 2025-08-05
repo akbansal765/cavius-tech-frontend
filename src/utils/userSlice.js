@@ -4,7 +4,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 
 export const registerUser = createAsyncThunk("registerUser", async (user, thunkAPI) => {
     try{
-        const response = await fetch(`http://localhost:5000/register`, {
+        const response = await fetch(`https://cavius-tech-backend.onrender.com/register`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -24,7 +24,7 @@ export const registerUser = createAsyncThunk("registerUser", async (user, thunkA
 
 export const loginUser = createAsyncThunk("loginUser", async (user, thunkAPI) => {
     try{
-        const response = await fetch(`http://localhost:5000/login`, {
+        const response = await fetch(`https://cavius-tech-backend.onrender.com/login`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"

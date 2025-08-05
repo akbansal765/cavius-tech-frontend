@@ -3,7 +3,7 @@ import { createSlice, createAsyncThunk} from "@reduxjs/toolkit";
 export const createTaskDB = createAsyncThunk("createTaskDB", async (task, thunkAPI) => {
     try{
         const userEmail = JSON.parse(localStorage.getItem("caviusTechUser"))?.email || "";
-        const response = await fetch(`http://localhost:5000/task?email=${userEmail}`, {
+        const response = await fetch(`https://cavius-tech-backend.onrender.com/task?email=${userEmail}`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -22,7 +22,7 @@ export const createTaskDB = createAsyncThunk("createTaskDB", async (task, thunkA
 export const deleteTaskDB = createAsyncThunk("deleteTaskDB", async (taskId, thunkAPI) => {
     try{
         const userEmail = JSON.parse(localStorage.getItem("caviusTechUser"))?.email || "";
-        const response = await fetch(`http://localhost:5000/task/${taskId}?email=${userEmail}`, {
+        const response = await fetch(`https://cavius-tech-backend.onrender.com/task/${taskId}?email=${userEmail}`, {
             method: "DELETE",
         });
         if (!response.ok) {
@@ -38,7 +38,7 @@ export const updateTaskDB = createAsyncThunk("updateTaskDB", async (task, thunkA
     console.log(task);
     try{
         const userEmail = JSON.parse(localStorage.getItem("caviusTechUser"))?.email || "";
-        const response = await fetch(`http://localhost:5000/task/${task.taskId}?email=${userEmail}`, {
+        const response = await fetch(`https://cavius-tech-backend.onrender.com/task/${task.taskId}?email=${userEmail}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -57,7 +57,7 @@ export const updateTaskDB = createAsyncThunk("updateTaskDB", async (task, thunkA
 export const getTasksDB = createAsyncThunk("getTasksDB", async (_, thunkAPI) => {
     try{
         const userEmail = JSON.parse(localStorage.getItem("caviusTechUser"))?.email || "";
-        const response = await fetch(`http://localhost:5000/tasks?email=${userEmail}`, {
+        const response = await fetch(`https://cavius-tech-backend.onrender.com/tasks?email=${userEmail}`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -107,8 +107,6 @@ const taskSlice = createSlice({
     },
     extraReducers: (builder) => {
         builder
-        .addCase(createTaskDB.pending, (state) => {
-        })
         .addCase(createTaskDB.fulfilled, (state, action) => {
             console.log(action.payload)
         })
@@ -117,8 +115,6 @@ const taskSlice = createSlice({
         });
 
         builder
-        .addCase(deleteTaskDB.pending, (state) => {
-        })
         .addCase(deleteTaskDB.fulfilled, (state, action) => {
             console.log(action.payload)
         })
@@ -127,8 +123,6 @@ const taskSlice = createSlice({
         });
 
         builder
-        .addCase(updateTaskDB.pending, (state) => {
-        })
         .addCase(updateTaskDB.fulfilled, (state, action) => {
             console.log(action.payload)
         })
